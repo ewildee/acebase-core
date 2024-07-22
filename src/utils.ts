@@ -180,7 +180,7 @@ export function decodeString(buffer: TypedArrayLike | TypedArray | number[]): st
             const typedArray = buffer as TypedArray;
             buffer = new Uint8Array(typedArray.buffer, typedArray.byteOffset, typedArray.byteLength);
         }
-        if (buffer instanceof Buffer || buffer instanceof Array || buffer instanceof Uint8Array) {
+        if (buffer instanceof Array || buffer instanceof Uint8Array) {
             let str = '';
             for (let i = 0; i < buffer.length; i++) {
                 let code = buffer[i];
